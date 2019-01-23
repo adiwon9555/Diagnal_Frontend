@@ -73,7 +73,8 @@ export class AppComponent implements OnInit{
     });
   }
   getImageSrc(movie:Movie){
-    let url="assets/images/";
+    // let url="assets/images/";
+    let url="https://s3.ap-south-1.amazonaws.com/diagnalmovieimages/";
     let furl= url +movie.poster_image
     return furl;
     
