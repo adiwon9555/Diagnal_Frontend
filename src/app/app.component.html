@@ -1,0 +1,26 @@
+<div class="container" >
+  <br><br>
+  <div style="float: right;width: 30%;margin-right: 2%">
+    
+  <input autofocus *ngIf="searchShow" class="form-control" placeholder="Search"  type="text" [(ngModel)]="search"  (keyup)="searchMovies()" >
+  <span (click)="this.searchShow=true;" style="float: right" *ngIf="!searchShow" >
+      <img src="assets/images/search.png" width="30" height="30">
+  </span>
+  </div>
+  <br><br><br>  
+  <div class="row">
+    <div *ngFor='let movie of movies;index as i' class="col-sm-3">
+      <div class="card" style="margin: 2%;width: 90%;">
+        <img class="card-img-top" [src]="getImageSrc(movie)" alt="Card image cap">
+        <!-- <div class="card-body">
+          <h5 class="card-title"></h5>
+        </div> -->
+        <div class="card-footer text-center">
+          <span class="text-muted">{{movie.name}}&nbsp;&nbsp;
+          </span>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+</div>
