@@ -9,7 +9,7 @@ import { HttpClient, HttpParams } from '@angular/common/http';
 export class MovieService {
 	//URL='http://localhost:9001/';
   //  URL='http://localhost:3000/';
-  URL="ec2-3-17-158-58.us-east-2.compute.amazonaws.com:80/";
+  URL="http://ec2-3-17-158-58.us-east-2.compute.amazonaws.com:80/";
   constructor(private http:HttpClient) { }
   
   getAllMovies(pageNo):Observable<any>{
